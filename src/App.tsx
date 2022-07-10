@@ -1,15 +1,20 @@
+import {SessionProvider} from 'next-auth/react'
 import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
+import { Header } from './components/Header'
+import Home from './pages/Home/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
+    <div className="min-h-screen bg-yellow-400">
+      <header className="">
+        {/* <SessionProvider session={session}>
+          <div>
+            <App {...pageProps}></App>            
+          </div>
+        </SessionProvider> */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        {/* <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
@@ -36,8 +41,9 @@ function App() {
           >
             Vite Docs
           </a>
-        </p>
-      </header>
+        </p> */}       
+        <Home></Home>
+      </header>  
     </div>
   )
 }
