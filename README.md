@@ -51,3 +51,19 @@ yarn create vite minimalist-ticket-front --template react-ts
   base: 'minimalist-ticket-front/'
 
 - Add file github actions .github/workflows/ci-cd.yml
+
+- Add tailwindcss
+  yarn add -D tailwindcss postcss autoprefixer
+
+- Create or Add to main css file
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+- Add Import the CSS file if created, Import the newly-created ./src/index.css file in your ./src/main.js file:
+
+    import { createApp } from 'vue'
+    import App from './App.vue'
+    import './index.css'
+
+    createApp(App).mount('#app');
